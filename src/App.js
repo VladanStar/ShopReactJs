@@ -8,44 +8,42 @@ import Admin from "./pages/Admin";
 import NotFound from "./pages/NotFound";
 import Single from "./pages/Single";
 import Cart from "./pages/Cart";
-import { useState} from "react"
+import { useState } from "react";
 
 const App = () => {
-
-  const [items, setItems] = useState(
-    [
-      {
-        id: 1,
-        title: 'Orange t-shirt',
-        price: 39,
-        desc: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
-        qty: 4,
-        img: 'img/product1.jpg'
-      },
-      {
-        id: 2,
-        title: 'Traveller bag',
-        price: 80,
-        desc: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
-        qty: 8,
-        img: 'img/product2.jpg'
-      },
-      {
-        id: 3,
-        title: 'Sunglasses',
-        price: 30,
-        desc: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
-        qty: 5,
-        img: 'img/product3.jpg'
-      }
-    ]);
+  const [items, setItems] = useState([
+    {
+      id: 1,
+      title: "Orange t-shirt",
+      price: 39,
+      desc: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      qty: 4,
+      img: "img/product1.jpg",
+    },
+    {
+      id: 2,
+      title: "Traveller bag",
+      price: 80,
+      desc: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      qty: 8,
+      img: "img/product2.jpg",
+    },
+    {
+      id: 3,
+      title: "Sunglasses",
+      price: 30,
+      desc: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      qty: 5,
+      img: "img/product3.jpg",
+    },
+  ]);
   return (
     <BrowserRouter>
       <div>
         <Navbar />
 
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home items={items} />} />
           <Route path="/single" element={<Single />}>
             <Route path="/single" element={<Single />} />
           </Route>
