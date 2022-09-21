@@ -7,7 +7,7 @@ const Navbar = () => {
       <article className="container d-flex justify-content-between">
         <div>Phone: 0601531175 | Email:vladancupric@gmail.com</div>
         <div>
-          <Link to="home">Gtf Card</Link> | <Link to="/home">Contact</Link>
+          <Link to="home">Gtf Card</Link> | <Link to="/">Contact</Link>
         </div>
       </article>
       {/* </section>
