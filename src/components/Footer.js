@@ -2,9 +2,9 @@ import React from 'react'
 
 const Footer = () => {
   return (
-      <footer className="py-5 bg-dark">
-          <div className="container">
-              <div className="row">
+      <footer className="py-5 bg-dark ">
+          <div className="container  ">
+              <div className="row ">
                   <div className="col-md-3 col-ms-6">
                       <h4 id="white">About</h4>
                       <p id="whiteP">
@@ -33,8 +33,8 @@ const Footer = () => {
                   </div>
                   <div classNameName="col-md-3 col-ms-6">
                       <a classNameName="" href="index.html">
-                          <img
-                              classNameName="img-fluid rounded shadow-lg border border-white border-5 md-4"
+                          <img style={{ width: '150px' }}
+                              classNameName=" img-fluid rounded shadow-lg border border-white border-5 md-4"
                               src="./img/logo.png"
                               alt="..."
                           /></a>
