@@ -1,1 +1,173 @@
+:root {
+    --primary: #2080be;
+    --secondary: #ef7e22;
+    --accents: #bad232;
+    --text: #333333;
+    --white: #white;
+    --gray: gray;
+    --font: 16px;
+    --transition: 0.3s linear;
+}
 
+/* ******************
+basic styles
+***************** */
+body {
+    font-size: var(--font);
+    color: var(--text);
+}
+
+a {
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.button {
+    background: var(--accents);
+    padding: 10px 30px;
+    border-radius: 15px;
+    color: var(--text);
+    margin-top: 22px;
+    display: inline-block;
+}
+
+.button:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+/* ******************
+topbar
+***************** */
+.topbar {
+    font-size: 0.9rem;
+}
+
+.topbar a {
+    color: var(--accents);
+}
+
+.top a:hover {
+    color: var(--primary);
+}
+
+/* ******************
+navbar
+***************** */
+.navbar-brand img {
+    width: 70px;
+}
+
+nav {
+    border-bottom: 5px solid var(--accents);
+}
+
+/* ******************
+slider
+***************** */
+.carousel-caption {
+    position: absolute;
+    right: 15%;
+    bottom: 10rem;
+    left: 15%;
+    padding-top: 1.25rem;
+    color: #fff;
+    text-align: center;
+}
+
+.carousel-item h2 span {
+    color: var(--accents);
+}
+
+.carousel-item h2 {
+    line-height: 1;
+}
+
+/* ******************
+products
+***************** */
+/* .products .price .card-title + "h5" {
+    color: var(--accents);
+} */
+
+.products .price .card-title+ {
+    color: #2080be;
+}
+
+.products img {
+    transition: var(--transition);
+}
+
+.holder {
+    overflow: hidden;
+}
+
+.products img:hover {
+    transform: scale(1.1) rotate(2deg);
+}
+
+/* ******************
+ABOUT
+***************** */
+.about i {
+    color: var(--accents);
+    text-shadow: 0 0 1px var(--text);
+    font-size: 2rem;
+}
+
+.about .border-dark {
+    transition: var(--transition);
+}
+
+.about .border-dark:hover {
+    background-color: var(--text);
+    color: var(--white);
+}
+
+/* ******************
+DiscoverOFF
+***************** */
+.discoverOff {
+    background-image: url(img/shop.jpg);
+    height: 60vh;
+    background-position: top;
+    background-size: cover;
+}
+
+/* ******************
+Footer
+***************** */
+#white,
+#whiteP {
+    color: white;
+}
+
+footer a {
+    color: -var(--accents);
+    font-weight: lighter;
+}
+
+footer a:hover {
+    color: -var(--white);
+    font-weight: bolder;
+}
+
+/* ******************
+SINGLE
+***************** */
+.shopHeading {
+    color: #333333;
+}
+
+/* ******************
+RESPONSIVE
+***************** */
+@media (max-width: 768px) {
+    .topbar {
+        display: none;
+    }
+
+    .products .colm-md-4 {
+        margin-bottom: 25px;
+    }
+}
