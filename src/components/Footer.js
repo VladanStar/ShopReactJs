@@ -33,7 +33,7 @@ const Footer = () => {
                   </div>
                   <div classNameName="col-md-3 col-ms-6">
                       <a classNameName="" href="index.html">
-                          <img style={{ width: '150px' }}
+                          <img style={{ width: '160px' }}
                               classNameName=" img-fluid rounded shadow-lg border border-white border-5 md-4"
                               src="./img/logo.png"
                               alt="..."
