@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
   return (
@@ -38,7 +39,7 @@ const Home = () => {
                               Lorem ipsum dolor sit amet consectetur, <br />adipisicing elit.
                               Blanditiis, odit!
                           </p>
-                          <a href="#" className="button">View Collection</a>
+                          <Link to="#" className="button">View Collection</Link>
                       </div>
                   </div>
                   <div className="carousel-item">
@@ -54,7 +55,7 @@ const Home = () => {
                               Lorem ipsum dolor sit amet consectetur, <br />adipisicing elit.
                               Blanditiis, odit!
                           </p>
-                          <a href="#" className="button">View Collection</a>
+                          <Link to="#" className="button">View Collection</Link>
                       </div>
                   </div>
               </div>
@@ -96,7 +97,7 @@ const Home = () => {
                                       Some quick example text to build on the card title and make up
                                       the bulk of the card's content.
                                   </p>
-                                  <a href="single.html" className="button">Shop Now</a>
+                                  <Link to="/single" className="button">Shop Now</Link>
                               </div>
                           </div>
                       </div>
@@ -114,7 +115,7 @@ const Home = () => {
                                       Some quick example text to build on the card title and make up
                                       the bulk of the card's content.
                                   </p>
-                                  <a href="single.html" className="button">Shop Now</a>
+                                  <Link to="/single" className="button">Shop Now</Link>
                               </div>
                           </div>
                       </div>
@@ -132,7 +133,7 @@ const Home = () => {
                                       Some quick example text to build on the card title and make up
                                       the bulk of the card's content.
                                   </p>
-                                  <a href="single.html" className="button">Shop Now</a>
+                                  <Link to="/single" className="button">Shop Now</Link>
                               </div>
                           </div>
                       </div>
@@ -150,7 +151,7 @@ const Home = () => {
                                       Some quick example text to build on the card title and make up
                                       the bulk of the card's content.
                                   </p>
-                                  <a href="single.html" className="button">Shop Now</a>
+                                  <Link to="/single" className="button">Shop Now</Link>
                               </div>
                           </div>
                       </div>
@@ -168,7 +169,7 @@ const Home = () => {
                                       Some quick example text to build on the card title and make up
                                       the bulk of the card's content.
                                   </p>
-                                  <a href="single.html" className="button">Shop Now</a>
+                                  <Link to="/single" className="button">Shop Now</Link>
                               </div>
                           </div>
                       </div>
@@ -186,7 +187,7 @@ const Home = () => {
                                       Some quick example text to build on the card title and make up
                                       the bulk of the card's content.
                                   </p>
-                                  <a href="single.html" className="button mb-8">Shop Now</a>
+                                  <Link to="single.html" className="button mb-8">Shop Now</Link>
                               </div>
                           </div>
                       </div>
@@ -232,7 +233,7 @@ const Home = () => {
               <article className="container text-end">
                   <p className="lead">Woman Collectin</p>
                   <h2 className="display-2 fw-bolder">50% OFF</h2>
-                  <a href="#" className="button md-4">Discover NOW</a>
+                  <Link to="#" className="button md-4">Discover NOW</Link>
                   <p>Limited time offer</p>
               </article>
           </section>
