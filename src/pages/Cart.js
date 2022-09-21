@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
   return (
@@ -32,6 +33,9 @@ const Cart = () => {
                 </tr>
               </tbody>
             </table>
+            <Link to="/" className="button nt-4">
+              Payment proces
+            </Link>
           </div>
         </div>
       </article>
