@@ -33,7 +33,7 @@ const Home = ({items}) => {
                           <p>Some representative placeholder content for the first slide.</p> --> */}
                           <p className="lead">Woman collection</p>
                           <h2 className="display-2 fw-bold m-4">
-                              Show <span>your <br />personal</span> style
+                              Show <span>your <br />personal</span> 
                           </h2>
                           <p>
                               Lorem ipsum dolor sit amet consectetur, <br />adipisicing elit.
@@ -49,7 +49,7 @@ const Home = ({items}) => {
                           <p>Some representative placeholder content for the first slide.</p> --> */}
                           <p className="lead">Man collection</p>
                           <h2 className="display-2 fw-bold m-4">
-                              Show <span>your <br />personal</span> style
+                              Show <span>your <br />personal</span> 
                           </h2>
                           <p>
                               Lorem ipsum dolor sit amet consectetur, <br />adipisicing elit.
@@ -79,30 +79,29 @@ const Home = ({items}) => {
               </button>
           </div>
           {/* <!-- Products --> */}
-          <section className="products py-5">
-              <article className="container">
+          <section className="products py-5 ">
+              <article className="container d-flex justify-content-between">
                   {items.map((item, idx) => (
-                      <div className="row" key ={idx} >
-                      <div class="col-md-4 col-ms-6 mb-">
-                          <div class="card" style="width: 18rem">
+                    
+                      <div className="col-md-4 col-ms-6   " key={idx} >
+                          <div className="card" style={{width: "18rem"}}>
                               <div class="holder">
-                                  <img src="./img/product1.jpg" class="card-img-top" alt="..." />
+                                  <img src={item.img} className="card-img-top" alt="..." />
                               </div>
-                              <div class="card-body p-4">
-                                  <div class="price d-flex justify-content-between">
-                                      <h5 class="card-title">Orange t-shirt</h5>
-                                      <h5>$39</h5>
+                              <div className="card-body p-4">
+                                  <div className="price d-flex justify-content-between">
+                                      <h5 className="card-title">{item.title}</h5>
+                                      <h5>{item.price}</h5>
                                   </div>
 
-                                  <p class="card-text">
-                                      Some quick example text to build on the card title and make up
-                                      the bulk of the card's content.
+                                  <p className="card-text">
+                                     {item.desc}
                                   </p>
-                                  <a href="single.html" class="button">Shop Now</a>
+                                  <Link href="single.html" className="button">Shop Now</Link>
                               </div>
                           </div>
                           </div>
-                          </div>
+                          
                   ))}
                   {/* 
                       <div className="col-md-4 col-ms-6 mb-">
