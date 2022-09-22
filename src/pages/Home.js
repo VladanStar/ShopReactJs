@@ -91,7 +91,7 @@ const Home = ({items}) => {
                               <div className="card-body p-4">
                                   <div className="price d-flex justify-content-between">
                                       <h5 className="card-title">{item.title}</h5>
-                                      <h5>{item.price}</h5>
+                                      <h5>${item.price}</h5>
                                   </div>
 
                                   <p className="card-text">
