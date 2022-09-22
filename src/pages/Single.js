@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
+import { useRef } from 'react';
 
 const Single = ({items, cart, setCart}) => {
     let params = useParams();
@@ -8,6 +9,7 @@ const Single = ({items, cart, setCart}) => {
     for(let i=1; i<items[params.singleId].qty;i++ ){
         option.push(<option key={i} value={i}>{i}</option>)
     }
+    const qty = useRef(0);
     const addToCart = () => {
         let newCartItem = {
             id: items[params.singleId].id,

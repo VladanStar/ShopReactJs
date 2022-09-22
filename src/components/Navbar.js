@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({cart}) => {
   return (
     <section className="topbar bg-light py-2">
       <article className="container d-flex justify-content-between">
@@ -52,7 +52,7 @@ const Navbar = () => {
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/cart">
-                  Cart{" "}
+                  Cart:  {cart.length}
                 </Link>
               </li>
             </ul>

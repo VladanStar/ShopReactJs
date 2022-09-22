@@ -41,7 +41,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <div>
-        <Navbar />
+        <Navbar  cart={cart}/>
 
         <Routes>
           <Route path="/" element={<Home items={items} />} />
@@ -49,7 +49,7 @@ const App = () => {
             <Route path=":singleId" element={<Single />} />
           </Route>
           <Route path="/admin" element={<Admin />} />
-          <Route path="/cart" element={<Cart />} />
+          <Route path="/cart" element={<Cart  cart={cart} setCart={setCart} />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
 
