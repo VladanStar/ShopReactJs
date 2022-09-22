@@ -81,7 +81,30 @@ const Home = ({items}) => {
           {/* <!-- Products --> */}
           <section className="products py-5">
               <article className="container">
-                  <div className="row">
+                  {items.map((item, ind) => (
+                      <div className="row">
+                      <div class="col-md-4 col-ms-6 mb-">
+                          <div class="card" style="width: 18rem">
+                              <div class="holder">
+                                  <img src="./img/product1.jpg" class="card-img-top" alt="..." />
+                              </div>
+                              <div class="card-body p-4">
+                                  <div class="price d-flex justify-content-between">
+                                      <h5 class="card-title">Orange t-shirt</h5>
+                                      <h5>$39</h5>
+                                  </div>
+
+                                  <p class="card-text">
+                                      Some quick example text to build on the card title and make up
+                                      the bulk of the card's content.
+                                  </p>
+                                  <a href="single.html" class="button">Shop Now</a>
+                              </div>
+                          </div>
+                          </div>
+                          </div>
+                  ))}
+                  {/* 
                       <div className="col-md-4 col-ms-6 mb-">
                           <div className="card" style={{ width: "18rem" }}>
                               <div className="holder">
@@ -191,7 +214,7 @@ const Home = ({items}) => {
                               </div>
                           </div>
                       </div>
-                  </div>
+                  </div> */}
               </article>
           </section>
           <section className="about py-5 bg-light">
