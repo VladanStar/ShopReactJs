@@ -86,7 +86,7 @@ const Home = ({items}) => {
                       <div className="col-md-4 col-ms-6   " key={idx} >
                           <div className="card" style={{width: "18rem"}}>
                               <div class="holder">
-                                <Link to='/single'>
+                                <Link to={`/single/${idx}`}>
                                   <img src={item.img} className="card-img-top" alt="..." />
                                   </Link>
                               </div>
@@ -99,7 +99,7 @@ const Home = ({items}) => {
                                   <p className="card-text">
                                      {item.desc}
                                   </p>
-                                  <Link to={`/single/${idx}`} className="button">Shop Now</Link>
+                                  <Link to='/cart' className="button">Shop Now</Link>
                               </div>
                           </div>
                           </div>

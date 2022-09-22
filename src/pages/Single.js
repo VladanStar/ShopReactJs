@@ -1,9 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
-const Single = () => {
+const Single = ({items}) => {
+    let params = useParams();
   return (
-    //  <!-- top handing -->
+<>
+   
+     {/* <!-- shop heading --> */}
+     <section className="shopHeading text-center bg-light py-5">
+     <h2 className="fw-bolder">Single product page</h2>
+     <p className="fw-lighter">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+ </section>
     
     <section className="single py-5">
         <article className="container">
@@ -34,7 +42,7 @@ const Single = () => {
         </article>
     </section>
     
-   
+    </>
   )
 }
 
