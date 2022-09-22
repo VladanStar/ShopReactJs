@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -16,16 +17,16 @@ const Footer = () => {
             <h4 className="mb-4">Top products</h4>
             <ul className="list-unstyled">
               <li>
-                <a href="">Jeans</a>
+                <Link to="/">Jeans</Link>
               </li>
               <li>
-                <a href="">Bags</a>
+                <Link to="">Bags</Link>
               </li>
               <li>
-                <a href="">Accesories</a>
+                <Link to="">Accesories</Link>
               </li>
               <li>
-                <a href="">Phones</a>
+                <Link to="">Phones</Link>
               </li>
             </ul>
           </div>
@@ -33,16 +34,16 @@ const Footer = () => {
             <h4 className="mb-4">Quick links</h4>
             <ul className="list-unstyled">
               <li>
-                <a href="">Home</a>
+                <Link to="">Home</Link>
               </li>
               <li>
-                <a href="">Blog</a>
+                <Link to="">Blog</Link>
               </li>
               <li>
-                <a href="">Shop</a>
+                <Link to="">Shop</Link>
               </li>
               <li>
-                <a href="">Kontakt</a>
+                <Link to="">Kontakt</Link>
               </li>
             </ul>
           </div>

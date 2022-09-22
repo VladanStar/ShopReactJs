@@ -81,8 +81,8 @@ const Home = ({items}) => {
           {/* <!-- Products --> */}
           <section className="products py-5">
               <article className="container">
-                  {items.map((item, ind) => (
-                      <div className="row">
+                  {items.map((item, idx) => (
+                      <div className="row" key ={idx} >
                       <div class="col-md-4 col-ms-6 mb-">
                           <div class="card" style="width: 18rem">
                               <div class="holder">

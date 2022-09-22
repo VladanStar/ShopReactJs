@@ -15,7 +15,7 @@ const Navbar = () => {
       <nav className="navbar navbar-expand-lg bg-light">
         <div className="container">
           <Link className="navbar-brand" to="index.html">
-            <img src="./img/logo.png" />
+            {/* <img src="./img/logo.png" /> */}
           </Link>
           <button
             className="navbar-toggler"
