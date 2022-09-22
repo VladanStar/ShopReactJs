@@ -17,12 +17,12 @@ const Single = ({items}) => {
         <article className="container">
             <div className="row align-items-center">
                 <div className="col-md-6">
-                <img className="img-fluid rounded border shadow-lg" src="./img/product5.jpg" alt=""/>
+                <img className="img-fluid rounded border shadow-lg" src={'../' + items[params.singleId].img}  alt=""/>
                 </div>
                 <div className="col-md-6">
                     <div className="price d-flex justify-content-between">
-                        <h5 className="card-title"> Sunglasses</h5>
-                        <h5>$167</h5>
+                        <h5 className="card-title"> {items[params.singleId].title}</h5>
+                        <h5>$ {items[params.singleId].price}</h5>
                     </div>
                     <select className="form-select" aria-label="Default select example">
                         <option selected>Quantity</option>
