@@ -50,7 +50,7 @@ const Footer = () => {
           <div className="col-md-3 col-sm-6">
             <a href="index.html">
               <img
-                src="img/logo.png"
+                src={'img/logo.png'}
                 alt=""
                 className="img-fluid rounded rounded-3 shadow-lg border border-white border-5"
               />

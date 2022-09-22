@@ -37,6 +37,7 @@ const App = () => {
       img: "img/product3.jpg",
     },
   ]);
+  const [cart, setCart] = useState([]);
   return (
     <BrowserRouter>
       <div>
@@ -44,7 +45,7 @@ const App = () => {
 
         <Routes>
           <Route path="/" element={<Home items={items} />} />
-          <Route path="/single" element={<Single items={items} />}>
+          <Route path="/single" element={<Single items={items} cart={cart} setCart={setCart} />}>
             <Route path=":singleId" element={<Single />} />
           </Route>
           <Route path="/admin" element={<Admin />} />

@@ -2,8 +2,28 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 
-const Single = ({items}) => {
+const Single = ({items, cart, setCart}) => {
     let params = useParams();
+    let option=[];
+    for(let i=1; i<items[params.singleId].qty;i++ ){
+        option.push(<option key={i} value={i}>{i}</option>)
+    }
+    const addToCart = () => {
+        let newCartItem = {
+            id: items[params.singleId].id,
+            title: items[params.singleId].title,
+            price: items[params.singleId].price,
+            desc: items[params.singleId].desc,
+            qty: qty.current.value,
+            img: items[params.singleId].img
+        };
+        // let tmp = [...cart];
+        // setCart([...tmp, newCartItem]);
+        setCart((prev) => {
+            return [...prev, newCartItem];
+        })
+    }
+
   return (
 <>
    
@@ -26,16 +46,17 @@ const Single = ({items}) => {
                     </div>
                     <select className="form-select" aria-label="Default select example">
                         <option selected>Quantity</option>
-                        <option value="1">1</option>
+                        {option}
+                        {/* <option value="1">1</option>
                         <option value="2">2</option>
-                        <option value="3">3</option>
+                        <option value="3">3</option> */}
                     </select>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio blanditiis officia dolore quibusdam tenetur aut aperiam atque non exercitationem officiis!
                         
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore reprehenderit, iure dignissimos harum repellendus minus culpa quaerat libero. Optio, accusantium.
                     </p>
-                    <Link to="/cart" className="button">Add To Cart</Link>
+                    <Link onClick={addToCart} to="/cart" className="button">Add To Cart</Link>
                 </div>
             </div>
 

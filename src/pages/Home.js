@@ -80,7 +80,7 @@ const Home = ({items}) => {
           </div>
           {/* <!-- Products --> */}
           <section className="products py-5 ">
-              <article className="container d-flex justify-content-between">
+              <article className="container d-flex justify-content-around">
                   {items.map((item, idx) => (
                     
                       <div className="col-md-4 col-ms-6   " key={idx} >
