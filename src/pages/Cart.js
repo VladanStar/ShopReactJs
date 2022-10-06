@@ -14,6 +14,7 @@ const Cart = ({cart, setCart}) => {
                   <th scope="col">image</th>
                   <th scope="col">Title</th>
                   <th scope="col">Quantity</th>
+                  <th scope="col">)Price</th>
                 </tr>
               </thead>
               <tbody>
