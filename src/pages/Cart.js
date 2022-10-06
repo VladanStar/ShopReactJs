@@ -58,15 +58,14 @@ const Cart = ({ cart, setCart }) => {
                     ClearCart
                   </button>
                 </td>
-                <td></td>
-                <td></td>
-                <td>Total:</td>
-                <td>
-                  $
-                  {cart.reduce((acc, cur) => {
-                    return acc + cur.price * cur.qty;
-                  }, 0)}
-                </td>
+                <tr>
+                                        <th scope="row"></th>
+                                        <td><button className="btn btn-danger" onClick={() => {setCart([])}}>ClearCart</button></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>Total:</td>
+                                        <td>${cart.reduce((acc, cur) => { return acc + cur.price * cur.qty }, 0)}</td>
+                                    </tr>
                 {/* <tr>
                   <th scope="row">3</th>
                   <td>Sunglasses</td>
