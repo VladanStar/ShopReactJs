@@ -10,8 +10,9 @@ const Cart = ({cart, setCart}) => {
             <table className="table table-striped table-hover shadow-lg">
               <thead>
                 <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">Product</th>
+                <th scope="col">id</th>
+                  <th scope="col">image</th>
+                  <th scope="col">Title</th>
                   <th scope="col">Quantity</th>
                 </tr>
               </thead>
