@@ -2,6 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Cart = ({ cart, setCart }) => {
+  const removeFromCart = (idx) => {
+    let tempCart = [...cart];
+    tempCart.splice(idx, 1);
+    setCart(tempCart);
+  };
   return (
     <secttion className="single py-5">
       <article className="container">
@@ -19,25 +24,49 @@ const Cart = ({ cart, setCart }) => {
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>
-                    <img src="img/product1.jpg" height="22px" />
-                  </td>
-                  <td>Orange t-shirt</td>
-                  <td>Neki opis</td>
-                  <td>1</td>
-                  <td>$39</td>
-                </tr>
-                <tr>
-                  <th scope="row"></th>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td>Total</td>
-                  <td>$100</td>
-                  
-                </tr>
+                {cart.map((item, idx) => {
+                  return (
+                    <tr key={idx}>
+                      <th scope="row">{item.id}</th>
+                      <td>
+                        <img src={item.img} height="30px" />
+                      </td>
+                      <td>{item.title}</td>
+                      <td>{item.desc}</td>
+                      <td>{item.qty}</td>
+                      <td>${item.price}</td>
+                      <td>
+                        <button
+                          onClick={() => removeFromCart(idx)}
+                          className="btn btn-danger"
+                        >
+                          X
+                        </button>
+                      </td>
+                    </tr>
+                  );
+                })}
+
+                <th scope="row"></th>
+                <td>
+                  <button
+                    className="btn btn-danger"
+                    onClick={() => {
+                      setCart([]);
+                    }}
+                  >
+                    ClearCart
+                  </button>
+                </td>
+                <td></td>
+                <td></td>
+                <td>Total:</td>
+                <td>
+                  $
+                  {cart.reduce((acc, cur) => {
+                    return acc + cur.price * cur.qty;
+                  }, 0)}
+                </td>
                 {/* <tr>
                   <th scope="row">3</th>
                   <td>Sunglasses</td>
