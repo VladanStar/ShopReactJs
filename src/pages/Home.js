@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Home = ({items}) => {
+const Home = ({items, cart, setCart}) => {
 
 
     const addToCart = (idx) => {
