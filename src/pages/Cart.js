@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Cart = ({cart, setCart}) => {
+const Cart = ({ cart, setCart }) => {
   return (
     <secttion className="single py-5">
       <article className="container">
@@ -10,22 +10,24 @@ const Cart = ({cart, setCart}) => {
             <table className="table table-striped table-hover shadow-lg">
               <thead>
                 <tr>
-                <th scope="col">id</th>
+                  <th scope="col">id</th>
                   <th scope="col">image</th>
                   <th scope="col">Title</th>
+                  <th scope="col">Description</th>
                   <th scope="col">Quantity</th>
                   <th scope="col">Price</th>
-                  <th scope="col">Description</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <th scope="row">1</th>
-                  <td><img src="img/product1.jpg"/></td>
+                  <td>
+                    <img src="img/product1.jpg" height="22px" />
+                  </td>
                   <td>Orange t-shirt</td>
+                  <td>Neki opis</td>
                   <td>1</td>
                   <td>$39</td>
-                  <td>Neki opis</td>
                 </tr>
                 <tr>
                   <th scope="row">2</th>
