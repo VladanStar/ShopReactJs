@@ -30,15 +30,19 @@ const Cart = ({ cart, setCart }) => {
                   <td>$39</td>
                 </tr>
                 <tr>
-                  <th scope="row">2</th>
-                  <td>Traveller bag</td>
-                  <td>1</td>
+                  <th scope="row"></th>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>Total</td>
+                  <td>$100</td>
+                  
                 </tr>
-                <tr>
+                {/* <tr>
                   <th scope="row">3</th>
                   <td>Sunglasses</td>
                   <td>1</td>
-                </tr>
+                </tr> */}
               </tbody>
             </table>
             <Link to="/" className="button nt-4">
