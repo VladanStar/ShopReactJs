@@ -2,6 +2,23 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const Home = ({items}) => {
+
+
+    const addToCart = (idx) => {
+        let newCartItem = {
+            id: items[idx].id,
+            title: items[idx].title,
+            price: items[idx].price,
+            desc: items[idx].desc,
+            qty: 1,
+            img: items[idx].img
+        };
+        // let tmp = [...cart];
+        // setCart([...tmp, newCartItem]);
+        setCart((prev) => {
+            return [...prev, newCartItem];
+        })
+    }
   return (
       <>
           <div
@@ -99,7 +116,7 @@ const Home = ({items}) => {
                                   <p className="card-text">
                                      {item.desc}
                                   </p>
-                                  <Link to='/cart' className="button">Shop Now</Link>
+                                  <Link onClick={() => addToCart(idx)}  className="button">Shop Now</Link>
                               </div>
                           </div>
                           </div>
