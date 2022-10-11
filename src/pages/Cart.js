@@ -24,41 +24,29 @@ const Cart = ({ cart, setCart }) => {
                 </tr>
               </thead>
               <tbody>
-                {cart.map((item, idx) => {
-                  return (
-                    <tr key={idx}>
-                      <th scope="row">{item.id}</th>
-                      <td>
-                        <img src={item.img} height="30px" />
-                      </td>
-                      <td>{item.title}</td>
-                      <td>{item.desc}</td>
-                      <td>{item.qty}</td>
-                      <td>$ {item.price}</td>
-                      <td>
-                        <button
-                          onClick={() => removeFromCart(idx)}
-                          className="btn btn-danger"
-                        >
-                          X
-                        </button>
-                      </td>
-                    </tr>
-                  );
-                })}
-
-                <th scope="row"></th>
-                <td>
-                  <button
-                    className="btn btn-danger"
-                    onClick={() => {
-                      setCart([]);
-                    }}
-                  >
-                    ClearCart
-                  </button>
-                </td>
-                <tr>
+              {cart.map((item, idx) => {
+                                        return (
+                                            <tr key={idx}>
+                                                <th scope="row">{item.id}</th>
+                                                <td><img src={item.img} height="30px" /></td>
+                                                <td>{item.title}</td>
+                                                <td>{item.desc}</td>
+                                                <td>{item.qty}</td>
+                                                <td>${item.price}</td>
+                                                <td><button onClick={() => removeFromCart(idx)} className='btn btn-danger'>X</button></td>
+                                            </tr>
+                                        )
+                                    })}
+                                    {/* <tr>
+                                        <th scope="row">1</th>
+                                        <td><img src="img/product1.jpg" height="30px"/></td>
+                                        <td>Orange t-shirt</td>
+                                        <td>Neki Opis</td>
+                                        <td>1</td>
+                                        <td>$39</td>
+                                        <td><button className='btn btn-danger'>X</button></td>
+                                    </tr> */}
+                                    <tr>
                                         <th scope="row"></th>
                                         <td><button className="btn btn-danger" onClick={() => {setCart([])}}>ClearCart</button></td>
                                         <td></td>
@@ -66,11 +54,16 @@ const Cart = ({ cart, setCart }) => {
                                         <td>Total:</td>
                                         <td>${cart.reduce((acc, cur) => { return acc + cur.price * cur.qty }, 0)}</td>
                                     </tr>
-                {/* <tr>
-                  <th scope="row">3</th>
-                  <td>Sunglasses</td>
-                  <td>1</td>
-                </tr> */}
+                                    {/* <tr>
+                                        <th scope="row">2</th>
+                                        <td>Traveller bag</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Sunglasss</td>
+                                        <td>1</td>
+                                    </tr> */}
               </tbody>
             </table>
             <Link to="/" className="button nt-4">
