@@ -72,7 +72,7 @@ const Home = ({items, cart, setCart}) => {
                               Lorem ipsum dolor sit amet consectetur, <br />adipisicing elit.
                               Blanditiis, odit!
                           </p>
-                          <Link to="#" className="button">View Collection</Link>
+                          <Link to="/cart" className="button">View Collection</Link>
                       </div>
                   </div>
               </div>
@@ -116,7 +116,7 @@ const Home = ({items, cart, setCart}) => {
                                   <p className="card-text">
                                      {item.desc}
                                   </p>
-                                  <Link onClick={() => addToCart(idx)}  className="button">Shop Now</Link>
+                                  <Link onClick={() => addToCart(idx)} to="/cart" className="button">Shop Now</Link>
                               </div>
                           </div>
                           </div>
