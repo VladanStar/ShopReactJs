@@ -50,7 +50,7 @@ const App = () => {
           <Route path="/single" element={<Single items={items} cart={cart} setCart={setCart} />}>
             <Route path=":singleId" element={<Single />} />
           </Route>
-          <Route path="/admin" element={<Admin />} />
+          <Route  path="/admin" element={<Admin items={items} setItems={setItems}/>}/>
           <Route path="/cart" element={<Cart  cart={cart} setCart={setCart} />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
