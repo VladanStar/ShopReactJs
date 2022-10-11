@@ -37,15 +37,7 @@ const Cart = ({ cart, setCart }) => {
                                             </tr>
                                         )
                                     })}
-                                    {/* <tr>
-                                        <th scope="row">1</th>
-                                        <td><img src="img/product1.jpg" height="30px"/></td>
-                                        <td>Orange t-shirt</td>
-                                        <td>Neki Opis</td>
-                                        <td>1</td>
-                                        <td>$39</td>
-                                        <td><button className='btn btn-danger'>X</button></td>
-                                    </tr> */}
+                                   
                                     <tr>
                                         <th scope="row"></th>
                                         <td><button className="btn btn-danger" onClick={() => {setCart([])}}>ClearCart</button></td>
@@ -54,16 +46,7 @@ const Cart = ({ cart, setCart }) => {
                                         <td>Total:</td>
                                         <td>${cart.reduce((acc, cur) => { return acc + cur.price * cur.qty }, 0)}</td>
                                     </tr>
-                                    {/* <tr>
-                                        <th scope="row">2</th>
-                                        <td>Traveller bag</td>
-                                        <td>1</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>Sunglasss</td>
-                                        <td>1</td>
-                                    </tr> */}
+                                   
               </tbody>
             </table>
             <Link to="/" className="button nt-4">
