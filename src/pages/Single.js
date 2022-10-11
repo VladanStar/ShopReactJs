@@ -16,7 +16,7 @@ const Single = ({items, cart, setCart}) => {
             title: items[params.singleId].title,
             price: items[params.singleId].price,
             desc: items[params.singleId].desc,
-            qty: qty.current.value,
+            qty: items[params.singleId].qty,
             img: items[params.singleId].img
         };
         // let tmp = [...cart];
