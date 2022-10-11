@@ -34,7 +34,7 @@ const Cart = ({ cart, setCart }) => {
                       <td>{item.title}</td>
                       <td>{item.desc}</td>
                       <td>{item.qty}</td>
-                      <td>${item.price}</td>
+                      <td>$ {item.price}</td>
                       <td>
                         <button
                           onClick={() => removeFromCart(idx)}
